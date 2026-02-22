@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irma Hermida | Poetisa y Artista</title>
+    <meta name="description"
+        content="Sitio oficial de Irma Hermida. Exploración de su trayectoria en la poesía y las artes visuales.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home-page">
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Irma Hermida</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="blog.html">Escritura</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="cart-icon" id="cart-toggle">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path
+                            d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-9.172-1h9.53c1.025 0 1.96-.537 2.472-1.42l4.89-8.48A1 1 0 1 0 23.016 6h-16.71l-.32-1.602a1 1 0 0 0-.98-.802V3.5h-3a1 1 0 1 0 0 2h1.492l.842 4.21c.143.715.772 1.226 1.5 1.226H19.5l-3.37 5.836l-8.302.002L4.742 6.5h-2a1 1 0 0 0 0 2H3.742l3.086 8.5zm.9-1.5l1.64-8.5h11.26l2.36 8.5H8.728z" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content container">
+                <h1 class="fade-in">Trabajos creativos, <br><span>con la palabra y la imagen.</span></h1>
+                <p class="fade-in">Trayectoria en poesía y artes de Irma Hermida.</p>
+                <div class="hero-btns fade-in">
+                    <a href="galeria.html" class="btn btn-primary">Ver Galería</a>
+                    <a href="blog.html" class="btn btn-secondary">Leer Poemas</a>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <!-- Dynamic Summary for SEO/Navigation -->
+        <section class="section">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="reveal">
+                        <h2 class="section-title">La Artista</h2>
+                        <p>Irma Hermida fusiona la palabra y la imagen en una búsqueda constante de la belleza. Conozca
+                            su historia y su obra a través de sus diferentes facetas creativas.</p>
+                        <ul class="nav-overview">
+                            <li><a href="historia.html">Trayectoria y Biografía &rarr;</a></li>
+                            <li><a href="galeria.html">Portafolio de Artes Visuales &rarr;</a></li>
+                            <li><a href="blog.html">Escritos y Poemas &rarr;</a></li>
+                        </ul>
+                    </div>
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1544924228-25237ef213c3?auto=format&fit=crop&q=80&w=800"
+                            alt="Irma Hermida" class="img-fluid main-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Irma Hermida - Todos los derechos reservados.</p>
+            <p><small>Diseñado por Cuackzoide</small></p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar (Shared UI) -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="cart-close">&times;</button>
+        </div>
+        <div class="cart-items">
+            <p class="empty-msg">El carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total">Total: $0.00</div>
+            <button class="btn btn-primary w-100">Finalizar Compra</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
