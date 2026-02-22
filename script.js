@@ -1,4 +1,25 @@
-// Navbar Scroll Effect
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        // Close cart if open
+        if (cartSidebar.classList.contains('open')) {
+            toggleCart();
+        }
+    });
+}
+
+// Close mobile menu on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
 const header = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -46,7 +67,7 @@ addCartBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         count++;
         cartCount.textContent = count;
-        
+
         // Visual feedback
         btn.textContent = '¡Añadido!';
         btn.style.background = '#28a745';
@@ -56,14 +77,14 @@ addCartBtns.forEach(btn => {
         }, 1500);
 
         // Open cart to show progress
-        if(!cartSidebar.classList.contains('open')) {
+        if (!cartSidebar.classList.contains('open')) {
             toggleCart();
         }
 
         // Update mock items
         const cartItems = document.querySelector('.cart-items');
         if (count === 1) cartItems.innerHTML = '';
-        
+
         const item = document.createElement('div');
         item.className = 'cart-item-mock';
         item.style.padding = '1rem 0';
