@@ -57,6 +57,7 @@ h3,
     z-index: 1000;
     padding: 1.5rem 0;
     transition: var(--transition);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .navbar.scrolled {
